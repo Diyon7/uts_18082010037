@@ -1,0 +1,167 @@
+body {
+    margin: 0px;
+    padding: 0;
+    background-color: #222;
+}
+
+.main {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+}
+.menu {
+    width: 100px;
+    height: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: white;
+    padding: 0px;
+    display: inline-block;
+    text-align: center;
+    line-height: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.aktif {
+    width: 100px;
+    height: 30px;
+    background-color: white;
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    transform: skewX(20deg);
+    z-index: -1;
+    transition: all 0.3s ease-in;
+}
+.m1 {
+    color: black;
+}
+/* .logo {
+    position: relative;
+    top: 10px;
+    margin: 0px 30px;
+} */
+#showcase {
+    background-image: url('fotohe.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 19px;
+}
+.menu-btn .icon-g {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    opacity: 0;
+}
+.menu-btn .icon-d {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    padding: 0.9rem;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-btn .icon-d > div {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.menu-btn .icon-d > div:before,
+.menu-btn .icon-d > div:after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -7px;
+    width: 100%;
+    height: 2px;
+    background: inherit;
+}
+
+.menu-btn .icon-d > div:after {
+    top: 7px;
+}
+
+.menu-btn .icon-g:checked + .icon-d > div {
+    transform: rotate(135deg);
+}
+
+.menu-btn .icon-g:checked + .icon-d > div:before,
+.menu-btn .icon-g:checked + .icon-d > div:after {
+    top: 0;
+    transform: rotate(90deg);
+}
+.menu-btn .icon-g:checked:hover + .icon-d > div {
+    transform: rotate(225deg);
+}
+@media (max-width:650px) {
+    .menu-btn .icon-d {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        z-index: 1;
+        width: 50px;
+        height: 50px;
+        padding: 0.9rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .menu-btn .icon-d > div {
+        position: relative;
+        width: 100%;
+        height: 2px;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+    .nav-utama ul.menu-utama {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #f2f2f2;
+        width: 50%;
+        height: 100%;
+        border-right: #ccc 1px solid;
+        opacity: 0.9;
+        padding: 30px;
+        transform: translateX(-500px);
+    }
+
+    .nav-utama ul.menu-utama span {
+        padding: 15px;
+        border-bottom: #ccc solid 1px;
+        font-size: 12.9px;
+    }
+    .nav-utama ul.menu-utama span:last-child {
+        border-bottom: 0;
+    }
+}
+
+#showcase h1 {
+    font-size: 50px;
+}
